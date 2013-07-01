@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white">
+    
+    <com.wejoy.ui.WeJoyMainViewGroup   
+	  android:id="@+id/main_scrolllayout"    
+	  android:layout_width="fill_parent"    
+	  android:layout_height="fill_parent"
+   	  android:layout_weight="1">
+   	  
+      <include layout="@layout/main_system_menu"/>
+      <include layout="@layout/main_conv_view" />
+	  <!-- include layout="@layout/main_contact_view" /> -->
+	 </com.wejoy.ui.WeJoyMainViewGroup> 
+</LinearLayout>

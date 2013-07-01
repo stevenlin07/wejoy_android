@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <include layout="@layout/start_new_conv_title_bar"/>
+    
+    <EditText 
+        android:textColorHint="@color/search_hint" 
+        android:layout_gravity="center_vertical" 
+        android:id="@+id/new_conv_text_editor" 
+        android:background="@drawable/sms_embeded_text_editor_bg" 
+        android:focusable="true" 
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:minHeight="34.0dip" 
+        android:hint="请在此输入群聊主题" 
+        android:layout_weight="1"
+        android:maxLines="20" 
+        android:maxLength="2000" 
+        android:gravity="top"
+        android:inputType="textCapSentences|textAutoCorrect|textMultiLine|textShortMessage" 
+        android:imeOptions="actionSend|flagNoEnterAction"
+     />
+    
+    <GridView  
+		android:id="@+id/grid_new_conv"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content" 
+		android:horizontalSpacing="2pt"
+		android:verticalSpacing="4pt"
+		android:numColumns="4"
+		android:gravity="center"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		android:paddingTop="10dp"
+		android:background="@drawable/group_members_gb"
+	/>
+
+</LinearLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+  	android:layout_width="fill_parent"
+  	android:layout_height="fill_parent"
+  	android:orientation="vertical"
+	android:background="@color/graywhite">
+    
+    <include layout="@layout/chattingtitlebar"/>
+
+	<com.wejoy.ui.helper.ResizeLayout
+		android:id="@+id/chat_root"
+		android:focusable="false" 
+		android:focusableInTouchMode="false" 
+
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:gravity="center_horizontal"
+		android:orientation="vertical"
+	>
+    
+    <com.wejoy.ui.view.PullToRefreshListView 
+    	android:id="@+id/chatting_history_lv" 
+    	android:background="@null" 
+    	android:scrollbars="vertical" 
+    	android:transcriptMode="alwaysScroll"
+    	android:layout_width="fill_parent" 
+    	android:layout_height="fill_parent" 
+    	android:listSelector="@drawable/chatlistitem" 
+    	android:cacheColorHint="#00000000" 
+    	android:divider="@null" 
+    	android:layout_weight="1.0"  />
+   
+    <LinearLayout 
+    	android:orientation="horizontal" 
+    	android:background="@drawable/mmtitle_bg" 
+    	android:paddingRight="7.0dip" 
+    	android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content">
+        
+        <ImageView 
+        	android:layout_gravity="center_vertical" 
+        	android:id="@+id/sms_button_insert" 
+        	android:paddingLeft="15.0dip" 
+        	android:paddingTop="5.0dip" 
+        	android:paddingRight="7.0dip" 
+        	android:paddingBottom="5.0dip" 
+        	android:layout_width="wrap_content" 
+        	android:layout_height="wrap_content" 
+        	android:src="@drawable/smsinsert" />
+        <EditText
+        	android:textColorHint="@color/search_hint" 
+        	android:layout_gravity="center_vertical" 
+        	android:id="@+id/text_editor" 
+        	android:background="@drawable/sms_embeded_text_editor_bg" 
+        	android:focusable="true" 
+        	android:nextFocusRight="@+id/send_button" 
+        	android:layout_width="0.0dip" 
+        	android:layout_height="wrap_content" 
+        	android:layout_marginLeft="7.0dip" 
+        	android:layout_marginTop="5.0dip" 
+        	android:layout_marginRight="7.0dip" 
+        	android:layout_marginBottom="5.0dip" 
+        	android:minHeight="34.0dip" 
+        	android:hint="输入消息" 
+        	android:maxLines="8" 
+        	android:maxLength="2000" 
+        	android:capitalize="sentences" 
+        	android:autoText="true" 
+        	android:layout_weight="1.0" 
+        	android:inputType="textCapSentences|textAutoCorrect|textMultiLine|textShortMessage" 
+        	android:imeOptions="actionSend|flagNoEnterAction" />
+        <Button 
+        	android:gravity="center" 
+        	android:layout_gravity="center_vertical" 
+        	android:id="@+id/send_button" 
+        	android:background="@drawable/smssendbutton" 
+        	android:paddingLeft="11.0dip" 
+        	android:paddingRight="11.0dip" 
+        	android:nextFocusLeft="@id/text_editor" 
+        	android:layout_width="wrap_content" 
+        	android:layout_height="wrap_content" />
+     </LinearLayout>
+     <LinearLayout 
+            	android:id="@+id/talk_panel" 
+            	android:layout_width="fill_parent" 
+            	android:layout_height="wrap_content">
+                <ImageView 
+                	android:id="@+id/capture_image" 
+                	android:background="@drawable/mediamsgbg" 
+                	android:paddingLeft="18.0dip" 
+                	android:paddingRight="18.0dip" 
+                	android:layout_width="wrap_content" 
+                	android:layout_height="fill_parent" 
+                	android:src="@drawable/capture_image" />
+                <LinearLayout 
+                	android:id="@+id/recording" 
+                	android:background="@drawable/holdtotalkbg" 
+                	android:layout_width="0.0dip" 
+                	android:layout_height="fill_parent" 
+                	android:layout_weight="2.0">
+                    <TextView 
+                    	android:layout_width="0.0dip" 
+                    	android:layout_height="1.0dip" 
+                    	android:layout_weight="1.0" />
+                    <TextView 
+                    	android:id="@+id/pls_talk"
+                    	android:textSize="18.0sp" 
+                    	android:textColor="@color/pls_talk_normal" 
+                    	android:gravity="center" 
+                    	android:layout_gravity="center" 
+                    	android:layout_width="0.0dip" 
+                    	android:layout_height="wrap_content" 
+                    	android:text="按住说话" 
+                    	android:drawableLeft="@drawable/talk_mic_normal" 
+                    	android:layout_weight="4.0" />
+                    <TextView 
+                    	android:layout_width="0.0dip" 
+                    	android:layout_height="1.0dip" 
+                    	android:layout_weight="1.0" />
+                </LinearLayout>
+                <ImageView 
+                	android:id="@+id/send_image" 
+                	android:background="@drawable/mediamsgbg" 
+                	android:paddingLeft="18.0dip" 
+                	android:paddingRight="18.0dip" 
+                	android:layout_width="wrap_content" 
+                	android:layout_height="fill_parent" 
+                	android:src="@drawable/pick_image" />
+            </LinearLayout>
+			<GridView  
+				android:id="@+id/grid01"
+				android:layout_width="fill_parent" 
+				android:layout_height="200dip"
+				android:horizontalSpacing="pt"
+				android:verticalSpacing="pt"
+				android:numColumns="6"
+				android:visibility="gone"
+				android:gravity="center|bottom"
+				android:background="@drawable/emotionalfacebg"
+			/>
+</com.wejoy.ui.helper.ResizeLayout>
+</LinearLayout>

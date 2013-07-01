@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/news_detail_header"
+   	android:layout_width="fill_parent"
+   	android:layout_height="42dip" 
+   	android:gravity="center_vertical"
+   	android:orientation="horizontal"
+   	android:background="@drawable/bg_titlebar">
+    <ImageView 
+  		android:id="@+id/title_menu"
+   		android:layout_width="50dip" 
+	   	android:layout_height="30dip" 
+   		android:layout_gravity="left|center"
+   		android:clickable="true"
+   		android:src="@drawable/title_func"
+   		android:background="@drawable/chattitle_btn_selector"
+   		android:layout_marginLeft="3dip"
+   	/>
+   	
+   	<TextView
+		android:id="@+id/chatting_contact_name"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:textSize="20sp"
+		android:ellipsize="end"
+		android:background="@null"
+		android:textColor="@color/graywhite"
+	   	android:layout_gravity="center"
+		android:text="微聚"
+	/>
+   	<ImageView 
+   		android:id="@+id/convert_new_btn"
+	   	android:layout_width="50dip" 
+	   	android:layout_height="30dip" 
+	   	android:layout_gravity="right|center"
+	   	android:clickable="true"
+	   	android:src="@drawable/head_new"
+	   	android:background="@drawable/chattitle_btn_selector"
+	   	android:layout_marginRight="3dip"
+	   	/>
+
+</FrameLayout>

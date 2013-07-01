@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/convList_view" 
+    tools:context=".MainConvListView" >
+    
+	<include layout="@layout/convlist_titlebar"/>
+	<com.wejoy.ui.MainConvListView
+		android:id="@+id/main_conv_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:paddingLeft="3dip"
+        android:paddingRight="1dip"
+        />
+	
+    <!-- ImageView	android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        />
+    
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp" />  -->
+    
+   <!--  <include layout="@layout/main_footer" />    -->
+    
+</LinearLayout>

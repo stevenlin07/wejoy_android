@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/weibo_login_view"
+    android:background="@drawable/login_bg"
+>
+    <FrameLayout
+	    android:id="@+id/news_detail_header"
+	   	android:layout_width="fill_parent"
+	   	android:layout_height="wrap_content"
+	   	android:paddingLeft="2dip"
+	   	android:paddingRight="2dip"
+	   	android:gravity="center_vertical"
+	   	android:orientation="horizontal"
+	   	android:background="@drawable/bg_titlebar">
+	   	
+	   	<TextView
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:textSize="20sp"
+			android:ellipsize="end"
+			android:background="@null"
+			android:textColor="@color/graywhite"
+		   	android:layout_gravity="center"
+			android:text="微聚"
+		/>
+	</FrameLayout>
+    
+    <com.wejoy.ui.view.CornerListView
+	    android:id="@+id/login_list_view"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="10dip"
+		android:layout_marginRight="10dip" 
+		android:layout_alignParentBottom="true" 
+		android:layout_marginBottom="200.0dip"
+	/>
+  
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="70dip"
+        android:layout_below="@id/login_list_view"
+    />
+    <!-- 
+    <Button
+        android:id="@+id/auth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:onClick="onOauth"
+        android:text="微博认证OAUTH2.0" />
+
+    <Button
+        android:id="@+id/sso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@id/auth"
+        android:visibility="invisible"
+        android:text="单点登录sso" />
+
+    <TextView
+        android:id="@+id/show"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/auth"
+        android:layout_marginLeft="10dp" />
+
+    <Button
+        android:id="@+id/apiCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+           android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@id/sso"
+        android:text="注销"
+        android:visibility="invisible" />
+ -->
+</RelativeLayout>

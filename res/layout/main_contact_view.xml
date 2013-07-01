@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#f5f5f5"
+    >
+    
+	<include layout="@layout/group_list_bar"/>
+		<EditText 
+		    android:id="@+id/txt_input"
+		    android:layout_width="260dip" 
+		    android:layout_height="wrap_content"
+		    android:layout_gravity="center"
+		    android:layout_marginTop="5dip"
+		    android:layout_marginBottom="5dip"
+		    android:drawableLeft="@drawable/search_bar_icon_normal"
+		    android:background="@drawable/search_bar_edit_normal"
+    	/>
+	
+	<RelativeLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_weight="1.0"
+			>
+	    <ListView
+	         android:id="@+id/main_contact_listView"
+	      	android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	      	android:scrollbars="none"
+			android:scrollingCache="true"
+			android:cacheColorHint="#00000000"
+			android:textColor="#000000"
+			android:background="#f5f5f5"
+			/>
+		<ProgressBar   
+		    android:id="@+id/addGropuMemberProgressBar"
+		    android:layout_gravity="center"     
+		    style="?android:attr/progressBarStyleLarge"
+		    android:layout_width="wrap_content"   
+		    android:layout_height="wrap_content"  
+		    android:visibility="gone"   
+    	/>
+		<!-- com.wejoy.ui.QuickAlphabeticBar
+			android:layout_alignRight="@id/contact_listView"
+			android:layout_gravity="top|right|center"
+			android:id="@+id/fast_scroller" android:background="@null"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:scaleType="centerInside"
+			android:src="@drawable/dic_background" /-->
+		<TextView
+			android:layout_centerInParent="true" 
+			android:id="@+id/fast_position" android:textSize="14dip" android:visibility="invisible"
+			android:textColor="#404040" android:background="@drawable/sort_icon_bg_click"
+			android:layout_gravity="center_horizontal|top" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:gravity="center" />
+	</RelativeLayout>
+<!-- 	<include android:id="@+id/contactlist_main_footer" layout="@layout/main_footer" /> -->
+	<include android:id="@+id/contactlist_select_footer" layout="@layout/contact_select_footer" android:visibility="gone"/>
+</LinearLayout>

@@ -1,0 +1,12 @@
+package com.weibo.sdk.utils;
+
+message NioPacket {
+  required int32 sort = 1;          // sort
+  optional string callbackId = 2;   // callbackid
+  optional int32 code = 3;          // wesync status code
+  optional string text = 4;          // wesync status string
+  optional string uid = 28;           // wesync uri
+  optional bytes uri = 29;           // wesync uri
+  optional bytes content = 30;       // message content
+  optional bytes attache = 31;       // attached file
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal" 
+	android:layout_width="fill_parent" 
+	android:layout_height="wrap_content"
+	android:background="@drawable/widget_bar_bg_n">
+	
+    <TextView android:layout_weight="1" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+	<TextView
+		android:id="@+id/contact_select_finish_btn"
+		android:background="@drawable/btn_rectangle_bg"
+		android:gravity="center"
+		android:layout_width="75dip" 
+		android:paddingRight="5dip"
+		android:layout_height="wrap_content"
+		android:textColor="@color/graywhite"
+	   	android:textSize="16sp"
+	   	android:clickable="true"
+		android:text="确定"
+	/>
+</LinearLayout>

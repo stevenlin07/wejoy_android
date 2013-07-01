@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <string name="app_name">Wejoy</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="hello">Hello World, ChatActivity!</string>
+	<string name="myDisplayName">我</string>
+	<string name="wejoy_chatting">wejoy聊天</string>
+	<string name="common_msg_nosdcard">未插入SD卡，请检查</string>
+	<string name="common_msg_get_photo_failure">无法获得图片</string>
+	
+	<!-- pull to refresh components -->
+	<string name="pull_to_refresh_tap_label">Tap to refresh</string>
+	<string name="pull_to_refresh_pull_label">下拉刷新</string>
+    <string name="pull_to_refresh_release_label">松开后刷新</string>
+    <string name="pull_to_refresh_refreshing_label">努力刷新中</string>
+    
+    <!-- home page footer bar components -->
+	<string name="main_menu_login">用户登录</string>
+	<string name="main_menu_logout">注销登录</string>
+	<string name="main_menu_myinfo">我的资料</string>
+	<string name="main_menu_software">开源软件</string>
+	<string name="main_menu_search">搜索</string>
+	<string name="main_menu_setting">系统设置</string>
+	<string name="main_menu_exit">退出程序</string>
+	
+	<!-- group list ui -->
+	<string name="group_list_hello">群聊组</string>
+	<string name="group_select_title">请选择群聊组</string>
+	<string name="group_select_cancel">取消</string>
+	<string name="group_select_start">开始</string>
+	
+</resources>

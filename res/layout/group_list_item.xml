@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:id="@+id/list_item_parent_layout"
+	>
+	<!-- 此处会根据实际情况显示首字母提示-->
+	<TextView android:id="@+id/text_first_char_hint"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:textSize="@dimen/list_first_char_hint_text_size"
+		android:background="@color/hint_foreground_dark"
+		android:textColor="#ffffff"
+		android:paddingLeft="@dimen/list_item_first_char_padding"
+		android:visibility="gone">
+	</TextView>
+	<!-- 以下的LinearLayout为常规的ListItem布局 -->
+	<LinearLayout 
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+		<TextView android:id="@+id/list_order_number"
+			android:textSize="@dimen/list_item_order_number_size"
+			android:layout_width="wrap_content"
+			android:layout_height="fill_parent"
+			android:gravity="center_vertical">
+		</TextView>
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="wrap_content"
+			android:layout_height="fill_parent"
+			android:layout_weight="1">
+			<TextView android:id="@+id/text_website_name"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:textColor="@android:color/black"
+				android:layout_gravity="center_vertical"
+				android:textSize="18sp"
+				android:singleLine="true"
+		      	android:ellipsize="marquee"
+			></TextView>
+			<TextView android:id="@+id/text_website_url"
+		      android:layout_width="fill_parent"  
+		      android:layout_height="wrap_content"  
+		      android:textColor="@android:color/white"
+		      android:textSize="@dimen/list_item_url_size"  
+		      android:singleLine="true"
+		      android:ellipsize="marquee"  
+		   ></TextView>
+		</LinearLayout>
+		<View android:id="@+id/divider"
+			android:background="@color/dim_foreground_dark"
+			android:focusable="false"
+			android:clickable="false"
+			android:longClickable="false"
+			android:layout_marginTop="@dimen/list_item_divider_margin"
+			android:layout_marginBottom="@dimen/list_item_divider_margin"
+			android:layout_width="1dp"
+			android:layout_height="fill_parent"
+			android:gravity="center_vertical"
+		></View>
+		
+	</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:gravity="center_horizontal"
+	android:padding="6dip"
+	>
+ <ImageView
+	android:id="@+id/group_member_face"
+	android:layout_width="52dp" 
+	android:layout_height="52dp"
+	/>
+		
+ <TextView
+    android:id="@+id/item_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="12sp"
+    android:singleLine="true"
+    android:textColor="@color/black">
+   </TextView>
+</LinearLayout>

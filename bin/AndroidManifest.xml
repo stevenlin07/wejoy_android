@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wejoy"
+    android:versionCode="1"
+    android:versionName="1.0"
+    android:installLocation="auto" 
+    >
+
+    <uses-sdk
+        android:minSdkVersion="5"
+        android:targetSdkVersion="17" />
+
+    <!-- android:allowBackup="true" 会导致背景标题的根本原因！ -->
+    <application 
+        
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+	<activity android:name=".ui.LoadActivity"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:icon="@drawable/wejoy_lancher">
+            <intent-filter>
+                <action android:name="com.wejoy.LoadActivity" />
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+         <activity
+            android:name=".ui.LoginActivity">
+            <intent-filter>
+                <action android:name="LoginActivity" />
+                <category android:name="LoginCategory" />
+				<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+         <activity
+            android:name=".ui.ConvActivity">
+            <intent-filter>
+                <action android:name="ConvActivity" />
+                <category android:name="ConvCategory" />
+				<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity> 
+        
+<!--         <activity android:name=".ui.Main"
+            android:icon="@drawable/wejoy_lancher">
+            <intent-filter>
+                <action android:name="com.wejoy.MainActivity" />
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> -->
+        
+        <activity android:name=".ui.MainChatActivity">
+            <intent-filter>
+                <action android:name="Chatting" />
+				<category android:name="CategoryChatting" />
+				<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.WeiboLoginActivity">
+            <intent-filter>
+                <action android:name="WeiboLogin" />
+                <category android:name="WeiboLoginCategory" />
+				<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.LoadingActivity">
+            <intent-filter>
+                <!-- action android:name="LoadingActivity" /-->
+				<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.FullSizeImageActivity">
+            <intent-filter>
+                <action android:name="FullSizeImageActivity" />
+				<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.MainContactListActivity">
+            <intent-filter>
+                <action android:name="ShowContactList" />
+				<!-- category android:name="CategoryGroupList" /-->
+				<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.ShowGroupMembersActivity">
+            <intent-filter>
+                <action android:name="ShowGroupMembers" />
+				<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.wejoy.ui.settings.UserInfoActivity">
+            <intent-filter>
+                <action android:name="userinfo" />
+				<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.wejoy.ui.settings.SysMenuActivity">
+            <intent-filter>
+                <action android:name="sysmenu" />
+				<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.wejoy.ui.settings.NotifyConfigActivity">
+            <intent-filter>
+                <action android:name="notifyconfig" />
+				<category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+ 		<receiver android:name="com.wejoy.sdk.net.NetworkStateReceiver">  
+            <intent-filter>  
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>  
+            </intent-filter>  
+        </receiver> 
+        <service android:name="com.wejoy.service.WeJoyService"></service>
+    </application>
+	 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <!-- 支持震动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+	<!-- SD卡中创建和删除文件权限 -->
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+</manifest>

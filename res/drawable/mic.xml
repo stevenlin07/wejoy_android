@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<level-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/mic_level0" android:maxLevel="0" />
+    <item android:drawable="@drawable/mic_level1" android:maxLevel="1" />
+    <item android:drawable="@drawable/mic_level2" android:maxLevel="2" />
+    <item android:drawable="@drawable/mic_level3" android:maxLevel="3" />
+    <item android:drawable="@drawable/mic_level4" android:maxLevel="4" />
+    <item android:drawable="@drawable/mic_level5" android:maxLevel="5" />
+    <item android:drawable="@drawable/mic_level6" android:maxLevel="6" />
+</level-list>

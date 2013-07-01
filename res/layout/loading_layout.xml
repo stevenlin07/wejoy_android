@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>    
+<RelativeLayout 
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <com.wejoy.ui.view.MyScrollLayout    
+	  xmlns:android="http://schemas.android.com/apk/res/android"    
+	  android:id="@+id/ScrollLayout"    
+	  android:layout_width="fill_parent"    
+	  android:layout_height="fill_parent">    
+  
+ 	  <FrameLayout    
+	  	android:background="@drawable/guide01"    
+	  	android:layout_width="fill_parent"    
+	  	android:layout_height="fill_parent">
+	  	
+ 	      <TextView
+			android:id="@+id/guide_text1"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:textSize="20sp"
+			android:ellipsize="end"
+			android:background="@null"
+			android:textColor="@color/listitem_black"
+		   	android:layout_gravity="center"
+			android:text="产品说明。。。"
+		  />
+	  </FrameLayout>   
+      
+	  <FrameLayout    
+	  	android:background="@drawable/guide02"    
+	  	android:layout_width="fill_parent"    
+	  	android:layout_height="fill_parent">
+ 	      <TextView
+			android:id="@+id/guide_text1"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:textSize="20sp"
+			android:ellipsize="end"
+			android:background="@null"
+			android:textColor="@color/listitem_black"
+		   	android:layout_gravity="center"
+			android:text="产品说明。。。"
+		  />
+	  </FrameLayout>    
+	      
+	  <FrameLayout     
+	  	android:background="@drawable/guide01"     
+	  	android:layout_width="fill_parent"    
+	  	android:layout_height="fill_parent">      
+ 	      <TextView
+			android:id="@+id/guide_text1"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:textSize="20sp"
+			android:ellipsize="end"
+			android:background="@null"
+			android:textColor="@color/listitem_black"
+		   	android:layout_gravity="center"
+			android:text="产品说明。。。"
+		  />	  
+	  </FrameLayout>    
+	  
+	  <FrameLayout    
+	  	android:background="@drawable/guide01"    
+	  	android:layout_width="fill_parent"    
+	  	android:layout_height="fill_parent">
+ 	      <TextView
+			android:id="@+id/guide_text1"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:textSize="20sp"
+			android:ellipsize="end"
+			android:background="@null"
+			android:textColor="@color/listitem_black"
+		   	android:layout_gravity="center"
+			android:text="产品说明。。。"
+		  />
+	  </FrameLayout>    
+	</com.wejoy.ui.view.MyScrollLayout> 
+
+    <LinearLayout 
+	    	android:orientation="horizontal" 
+	    	android:id="@+id/startBtn_linerlayout" 
+	    	android:layout_width="wrap_content" 
+	    	android:layout_height="wrap_content" 
+	    	android:layout_marginBottom="94.0dip" 
+	    	android:layout_alignParentBottom="true" 
+	    	android:layout_centerHorizontal="true">
+		  		<Button  
+	                android:id="@+id/loadingFinish_StartBtn"
+	                android:layout_width="wrap_content" 
+	    			android:layout_height="wrap_content" 
+	                android:layout_gravity="center_horizontal"
+	                android:background="@drawable/loadingfinish_start_btn"  
+	                android:text="  开始我的微聚生活   "
+	                android:textColor="@color/graywhite"
+	                android:textSize="18sp"
+	                android:visibility="gone"  />
+	</LinearLayout>
+    
+    <LinearLayout 
+    	android:orientation="horizontal" 
+    	android:id="@+id/llayout" 
+    	android:layout_width="wrap_content" 
+    	android:layout_height="wrap_content" 
+    	android:layout_marginBottom="24.0dip" 
+    	android:layout_alignParentBottom="true" 
+    	android:layout_centerHorizontal="true">
+    	
+        <ImageView android:clickable="true"  
+        	android:padding="15.0dip" 
+        	android:layout_gravity="center_vertical" 
+        	android:layout_width="wrap_content" 
+        	android:layout_height="wrap_content" 
+        	android:src="@drawable/guide_round" />
+        <ImageView android:clickable="true"  
+        	android:padding="15.0dip"  
+        	android:layout_gravity="center_vertical" 
+        	android:layout_width="wrap_content" 
+        	android:layout_height="wrap_content" 
+        	android:src="@drawable/guide_round" />
+        <ImageView android:clickable="true"  android:padding="15.0dip"  android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/guide_round" />
+        <ImageView android:clickable="true"  android:padding="15.0dip"  android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/guide_round" />
+    </LinearLayout>
+    
+</RelativeLayout>
+

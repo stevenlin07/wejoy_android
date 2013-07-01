@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" 
+   	android:paddingLeft="2dip"
+   	android:paddingRight="2dip"
+   	android:gravity="center_vertical"
+   	android:orientation="horizontal"
+   	android:background="@drawable/widget_bar_bg_p">
+	
+    <TextView 
+   		android:id="@+id/new_conv_cancel"
+	   	android:layout_width="wrap_content" 
+	   	android:layout_height="wrap_content" 
+	   	android:layout_gravity="left|center"
+	   	android:textColor="@color/graywhite"
+	   	android:textSize="18sp"
+	   	android:clickable="true"
+	   	android:text="返回"
+	   	android:background="@drawable/opt_back_selector"/>
+    
+    <TextView
+		android:id="@+id/new_conv_title"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:textSize="18sp"
+		android:ellipsize="end"
+		android:background="@null"
+		android:textColor="@color/graywhite"
+	   	android:layout_gravity="center"
+		android:text="发起群聊"
+	/>
+    
+    <TextView 
+   		android:id="@+id/new_conv_start"
+	   	android:layout_width="wrap_content" 
+	   	android:layout_height="wrap_content" 
+	   	android:layout_gravity="right|center"
+	   	android:textColor="@color/graywhite"
+	   	android:textSize="18sp"
+	   	android:clickable="true"
+	   	android:text="开始"
+	   	android:background="@drawable/opt_forward_selector"/>
+    
+</FrameLayout>

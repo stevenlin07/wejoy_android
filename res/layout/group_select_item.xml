@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/alpha"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#a9a9a9"
+        android:paddingLeft="10dip"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:visibility="gone" />
+    
+    <ImageView
+        android:id="@+id/groupIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/alpha"
+    />
+    
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/groupIcon"
+        android:layout_marginLeft="2.0dip"
+        android:layout_marginRight="5.0dip"
+       	android:layout_marginTop="13.0dip"
+        android:layout_toRightOf="@id/groupIcon"
+        android:singleLine="true"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+    
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/name"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_below="@id/name"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:visibility="gone"
+        android:textAppearance="?android:textAppearanceSmall" />
+
+    <CheckBox
+        android:id="@+id/group_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/groupIcon"
+        android:layout_toLeftOf="@id/groupIcon"
+        android:layout_alignParentRight="true"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:visibility="visible"
+        style="@style/CustomCheckboxTheme" />
+    
+</RelativeLayout>

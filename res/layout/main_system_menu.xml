@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:id="@+id/menu_view" 
+
+	>
+<!-- 定义一个List -->
+<ListView android:id="@+id/menu_list"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	/>
+<!-- android:background="@drawable/menu_bg" -->
+
+  <LinearLayout 
+    	android:orientation="horizontal" 
+    	android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content">
+	<!-- 定义一个ImageView，用于作为列表项的一部分。 -->
+	<ImageView android:id="@+id/menu_image"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:paddingLeft="10dp"
+		/>
+	<!-- 定义一个TextView，用于作为列表项的一部分。 -->
+	<TextView android:id="@+id/menu_name"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:textSize="16dp"
+		android:layout_gravity="center_vertical"
+		android:paddingLeft="10dp"
+		/>
+	 </LinearLayout>
+</LinearLayout>

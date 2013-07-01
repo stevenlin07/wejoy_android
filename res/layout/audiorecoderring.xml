@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_gravity="center_vertical|center_horizontal"
+	android:gravity ="center_vertical|center_horizontal"
+	android:id="@+id/recorder_ring" 
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content"
+	android:background="@drawable/record_image_back"
+	android:orientation="vertical">
+  	<TextView
+  	    android:id="@+id/speak_text"
+    	android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:textColor="@color/white"
+    	android:text="请开始说话"
+    	android:paddingTop="10dip"
+    	android:textSize="20sp"
+    />
+  	<ImageView
+        android:id="@+id/speak_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:scaleType="center"
+        android:src="@drawable/mic" />
+  	<!-- FrameLayout
+  		android:layout_gravity="center_vertical|center_horizontal"
+  		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:padding="20dip"
+  	>
+  	  <LinearLayout android:orientation="horizontal" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content">
+		    <ImageView 
+		    	android:id="@+id/background_image" 
+		    	android:layout_width="wrap_content" 
+		    	android:layout_height="wrap_content" 
+		    	android:src="@drawable/talk_ring" />
+		    <ImageView 
+		    	android:id="@+id/amp_state"
+				android:layout_gravity="bottom"
+		    	android:layout_width="wrap_content" 
+		    	android:layout_height="wrap_content" 
+		    	android:src="@drawable/amp1" />
+		    <ImageView 
+		    	android:id="@+id/foreground_image" 
+		    	android:layout_width="wrap_content" 
+		    	android:layout_height="wrap_content" />
+	   </LinearLayout>
+    </FrameLayout-->
+    
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:gravity="center_horizontal"
+	>
+	<FrameLayout 
+		android:layout_width="fill_parent" 
+		android:layout_height="42dip"  
+	    android:orientation="horizontal"
+	    android:gravity="top|center_vertical"
+		android:background="@drawable/bg_titlebar">
+		
+	    <TextView 
+	   		android:id="@+id/usr_config_back_btn"
+		   	android:layout_width="60dip" 
+		   	android:layout_height="30dip" 
+		   	android:layout_gravity="left|center"
+		   	android:textColor="@color/graywhite"
+		   	android:textSize="18sp"
+		   	android:clickable="true"
+		   	android:text="返回"
+		   	android:background="@drawable/chattitle_btn_selector"
+		   	android:layout_marginLeft="3dip"/>
+	   
+		<TextView
+			android:id="@+id/usr_config_title"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:textSize="18sp"
+			android:ellipsize="end"
+			android:background="@null"
+			android:textColor="@color/graywhite"
+		   	android:layout_gravity="center"
+			android:text="设置"
+		/>
+	</FrameLayout>
+	
+	<com.wejoy.ui.view.CornerListView
+	    android:id="@+id/system_menu_list"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:layout_margin="10dip" 
+	/>
+
+	<Button
+	    android:id="@+id/quit_account_btn"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_margin="10dip"
+	    android:layout_marginTop="300dip"
+	    android:text="退出登录" />
+
+</LinearLayout>

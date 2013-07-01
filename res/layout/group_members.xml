@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:gravity="center_horizontal"
+	>
+	<include layout="@layout/group_members_header"/>
+	
+	<ScrollView
+		android:focusable="false" 
+		android:focusableInTouchMode="false" 
+
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:gravity="center_horizontal"
+		android:orientation="vertical"
+	>
+	<LinearLayout 
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+		
+		<!-- 定义一个GridView组件 -->
+		<com.wejoy.ui.view.NoScrollGridView  
+			android:id="@+id/group_member_grid"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content" 
+			android:horizontalSpacing="2pt"
+			android:verticalSpacing="4pt"
+			android:numColumns="4"
+			android:gravity="center"
+			android:layout_margin="10dip"
+			android:background="@drawable/corner_list_bg"
+		/>
+		
+		<com.wejoy.ui.view.CornerListView
+		    android:id="@+id/group_setting_list"
+			android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:layout_margin="10dip" 
+		/>
+		
+		<Button
+		    android:id="@+id/start_group_chat_btn"
+		    android:layout_margin="10dip" 
+		    android:layout_width="fill_parent" 
+			android:layout_height="wrap_content"
+			android:text="开始聊天"
+		/>
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

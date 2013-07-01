@@ -1,0 +1,136 @@
+package com.weibo.sdk.type;
+
+message Meta{
+		required string id = 1; //client use this to trace changes
+		required bytes type = 2; //one byte only
+		optional string from = 3;
+		optional string to = 4;
+		optional int32 time = 5;
+		optional bytes content = 6;
+		optional bytes content_ext = 7;
+		optional string spanId = 8;
+		optional int32 spanSequenceNo = 9; //from 1 to N, then -1 the last one
+		optional int64 prestoreId = 10;
+        optional int32 spanLimit = 11; 
+        optional bytes thumbnail = 12; 
+        optional int32 fileLength = 13; // file length byte
+        optional string fileName = 14; // file name
+        optional int32 fileLimit = 15; // file divide counts
+}
+
+message DataSlice{
+		//index must not greater than limit
+		required int32 index = 1; 
+		required int32 limit = 2;
+		optional bytes data = 3;
+		optional string md5 = 4;
+}
+
+message FileData{
+		required string id = 1;
+		repeated DataSlice slice = 2;
+}
+
+//messages for command request and response
+message CommandMessage{
+		required bytes code = 1; // one byte only
+		optional bytes data = 2; // different message for different command
+}
+
+message Unread{
+		required string folderId = 1;
+		required int32 num = 2;
+		optional Meta content = 3; //for ios push message notice
+}
+//notice
+message Notice{
+		repeated Unread unread= 1;
+		repeated string expectAck = 2;
+		repeated Meta message = 3;
+}
+
+//Command: GetItemUnread
+message GetItemUnreadReq{
+		repeated string folderId = 1; //for folder unread mandatory flush 
+}
+message GetItemUnreadResp{
+		repeated Unread unread = 1;
+}
+
+//Command: FolderSync
+message FolderSyncReq{
+		required string id = 1;
+		required string key = 2;
+}
+message FolderSyncResp{
+		required string id = 1;
+		required string nextKey = 2;
+		optional bool isFullSync = 3; //abandoned
+		repeated string childId = 4;
+}
+
+//Command: FolderCreate
+message FolderCreateReq{
+		required string userChatWith = 1; //the creator if group chat
+		repeated string anotherUser = 2;
+}
+
+message FolderCreateResp{
+		required string folderId = 1;
+		required string userChatWith = 2;
+		repeated string anotherUser = 3;
+}
+
+//Command: FolderDelete
+message FolderDeleteReq{
+		required string userChatWith = 1;
+		required bool isContentOnly = 2; //false means also delete the folder
+		optional string folderId = 3;
+}
+
+//message FolderCreateResp empty
+
+//Command: Sync
+message SyncReq{
+		required string key = 1;
+		required string folderId = 2;
+		optional bool isFullSync = 3;
+		optional bool isForward = 4; //bidirectional sync, full sync only
+		optional string hintChildId = 5; //sync on any positions, full sync only
+		repeated Meta clientChanges = 6;
+		optional bool isSendOnly = 7;
+		repeated string selectiveAck = 8;
+		optional bool isSiblingInHarmony = 9; // fulfill SAN, which means all previous notices have been received
+}
+
+message SyncResp{
+		required string nextKey = 1;
+		required string folderId = 2;
+		optional bool isFullSync = 3;
+		repeated Meta clientChanges = 4; //is accepted or not?
+		repeated Meta serverChanges = 5;
+		optional bool hasNext = 6;
+}
+
+//Command: SendFile
+//message SendFileReq -> FileData
+//message SendFileResp -> FileData //empty or missing slices 
+
+//Command: GetFile
+//message GetFileReq -> FileData //get by indexes(slices) or by id (if only contains id)
+//message GetFileResp -> FileData
+
+//Command: ItemOperations
+message MetaSet{
+		repeated Meta meta = 1;
+}
+//message ItemOperationsReq -> MetaSet
+//message ItemOperationsResp -> MetaSet //return the sucessfully processed requests id in meta
+
+//Plugin: Group, message padded in Meta's Content 
+message GroupOperation{
+		required string groupId = 1;
+		required bytes type = 2; // addMember, removeMember and quitGroup etc.
+		optional string username = 3; 
+		optional string extend = 4; // might add/remove reason, the group title
+}

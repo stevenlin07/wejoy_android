@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" 
+	android:layout_height="42dip"  
+    android:orientation="horizontal"
+    android:gravity="top|center_vertical"
+    android:background="@drawable/bg_titlebar">
+	
+    <ImageView 
+   		android:id="@+id/news_detail_home"
+	   	android:layout_width="50dip" 
+	   	android:layout_height="30dip" 
+	   	android:layout_gravity="left|center"
+	   	android:textColor="@color/graywhite"
+	   	android:textSize="18sp"
+	   	android:clickable="true"
+	   	android:src="@drawable/title_func"
+	   	android:background="@drawable/chattitle_btn_selector"
+	   	android:layout_marginLeft="3dip"/>
+   
+	<TextView
+		android:id="@+id/chatting_contact_name"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:textSize="18sp"
+		android:ellipsize="end"
+		android:background="@null"
+		android:textColor="@color/graywhite"
+	   	android:layout_gravity="center"
+		android:text="联系人"
+	/>
+	
+	<ImageView 
+	    android:id="@+id/edit_group_btn"
+	    android:layout_gravity="right|center"
+	    android:layout_width="50dip"
+	    android:layout_height="30dip"
+		android:textColor="@color/graywhite"
+	   	android:textSize="18sp"
+	    android:clickable="true"
+	    android:src="@drawable/edit_groupcontact_normal"
+	    android:background="@drawable/chattitle_btn_selector"
+	    android:layout_marginRight="3dip"
+	/>
+
+</FrameLayout>

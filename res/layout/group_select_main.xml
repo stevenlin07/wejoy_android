@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="#f5f5f5">
+    
+    <include layout="@layout/group_select_title_bar"/>
+    
+    <EditText 
+	    android:id="@+id/txt_input"
+	    android:layout_width="260dip" 
+	    android:layout_height="35dip"
+	    android:layout_gravity="center"
+	    android:layout_marginTop="10dip"
+	    android:layout_marginBottom="10dip"
+	    android:drawableLeft="@drawable/search_bar_icon_normal"
+	    android:background="@drawable/search_bar_edit_normal"
+    />
+    
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+		android:layout_height="fill_parent" 
+		android:layout_weight="1.0">
+	
+	    <ListView android:id="@+id/groupListView"
+	      	android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	      	android:scrollbars="none"
+			android:layout_weight="1.0"
+			android:scrollingCache="true"
+			android:cacheColorHint="#00000000"
+			android:textColor="#000000"
+			android:background="#f5f5f5"
+			>
+		</ListView>
+
+	    <com.wejoy.ui.QuickAlphabeticBar
+			android:layout_alignRight="@id/groupListView"
+			android:layout_gravity="top|right|center"
+			android:layout_marginTop="10dip"
+			android:id="@+id/fast_scroller" 
+			android:background="@null"
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content"
+			android:scaleType="centerInside"
+			android:src="@drawable/dic_background" />
+		
+		<TextView
+			android:layout_centerInParent="true" 
+			android:id="@+id/fast_position" 
+			android:textSize="48dip" 
+			android:visibility="invisible"
+			android:textColor="#404040" 
+			android:background="@drawable/sort_icon_bg_click"
+			android:layout_gravity="center_horizontal|top" 
+			android:padding="2dip"
+			android:layout_margin="34dip" 
+			android:layout_width="70dip"
+			android:layout_height="70dip" 
+			android:gravity="center" />
+	
+	</RelativeLayout>
+
+</LinearLayout>
